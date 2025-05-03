@@ -1,3 +1,4 @@
+import CssBaseline from '@mui/material/CssBaseline'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import { BrowserRouter } from 'react-router-dom'
@@ -8,6 +9,7 @@ export const App = () => {
   return (
     <QueryClientProvider client={new QueryClient()}>
       <BrowserRouter>
+        <CssBaseline />
         <RouterProvider />
       </BrowserRouter>
     </QueryClientProvider>
