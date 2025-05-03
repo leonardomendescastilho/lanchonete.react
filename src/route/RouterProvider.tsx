@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 
-import { Home } from '../pages/home/index.ts'
+import Layout from '@/pages/@layout/Layout.tsx'
+import { Home } from '@/pages/home'
 
 export const RouterProvider = () => {
   return (
