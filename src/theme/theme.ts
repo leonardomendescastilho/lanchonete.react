@@ -1,3 +1,4 @@
+// theme.ts
 import '@fontsource/dm-serif-display'
 import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/400.css'
@@ -5,127 +6,40 @@ import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 import { ThemeOptions, createTheme } from '@mui/material/styles'
 
-const baseColors = {
-  primary: 'rgba(251, 44, 54, 1)',
-  primaryForeground: 'rgba(254, 242, 242, 1)',
-  secondary: 'rgba(244, 244, 245, 1)',
-  secondaryForeground: 'rgba(24, 24, 27, 1)',
-  background: 'rgba(255, 255, 255, 1)',
-  backgroundDark: 'rgba(9, 9, 11, 1)',
-  text: 'rgba(9, 9, 11, 1)',
-  textSecondary: 'rgba(113, 113, 123, 1)',
-  border: 'rgba(228, 228, 231, 1)',
+const colors = {
+  primary: {
+    main: 'rgba(251, 44, 54, 1)',
+    contrastText: 'rgba(254, 242, 242, 1)',
+  },
+  secondary: {
+    main: 'rgba(39, 39, 42, 1)',
+    contrastText: {
+      light: 'rgba(24, 24, 27, 1)',
+      dark: 'rgba(250, 250, 250, 1)',
+    },
+  },
+  background: {
+    light: 'rgba(255, 255, 255, 1)',
+    dark: 'rgba(24, 24, 27, 1)',
+  },
 }
 
-const theme: ThemeOptions = createTheme({
+const getThemeOptions = (mode: 'light' | 'dark'): ThemeOptions => ({
   palette: {
-    mode: 'light',
+    mode,
     primary: {
-      main: baseColors.primary,
-      contrastText: baseColors.primaryForeground,
+      main: colors.primary.main,
+      contrastText: colors.primary.contrastText,
     },
     secondary: {
-      main: baseColors.secondary,
-      contrastText: baseColors.secondaryForeground,
+      main: colors.secondary.main,
+      contrastText: colors.secondary.contrastText[mode],
     },
     background: {
-      default: baseColors.background,
-      paper: baseColors.background,
-    },
-    text: {
-      primary: baseColors.text,
-      secondary: baseColors.textSecondary,
-    },
-    error: { main: 'rgba(231, 0, 11, 1)' },
-    warning: { main: '#ed6c02' },
-    info: { main: '#2196f3' },
-    success: { main: '#4caf50' },
-  },
-  typography: {
-    fontFamily: `'Roboto', sans-serif`,
-    h1: { fontFamily: `'DM Serif Display', serif` },
-    h2: { fontFamily: `'DM Serif Display', serif` },
-    h3: { fontFamily: `'DM Serif Display', serif` },
-    h4: { fontFamily: `'DM Serif Display', serif` },
-    h5: { fontFamily: `'DM Serif Display', serif` },
-    h6: { fontFamily: `'DM Serif Display', serif` },
-  },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: (theme) => ({
-        ':root': {
-          '--font-base': `'Roboto', sans-serif`,
-          '--font-heading': `'DM Serif Display', serif`,
-          '--radius': '0.5rem',
-          '--primary': theme.palette.primary.main,
-          '--primary-foreground': theme.palette.primary.contrastText,
-          '--secondary': theme.palette.secondary.main,
-          '--secondary-foreground': theme.palette.secondary.contrastText,
-          '--background': theme.palette.background.default,
-          '--foreground': theme.palette.text.primary,
-          '--muted': baseColors.secondary,
-          '--muted-foreground': baseColors.textSecondary,
-          '--accent': baseColors.secondary,
-          '--accent-foreground': baseColors.secondaryForeground,
-          '--destructive': theme.palette.error.main,
-          '--border': baseColors.border,
-          '--input': baseColors.border,
-          '--ring': theme.palette.primary.main,
-          '--card': theme.palette.background.paper,
-          '--card-foreground': theme.palette.text.primary,
-          '--popover': theme.palette.background.paper,
-          '--popover-foreground': theme.palette.text.primary,
-          '--chart-1': 'rgba(245, 73, 0, 1)',
-          '--chart-2': 'rgba(0, 150, 137, 1)',
-          '--chart-3': 'rgba(16, 78, 100, 1)',
-          '--chart-4': 'rgba(255, 185, 0, 1)',
-          '--chart-5': 'rgba(254, 154, 0, 1)',
-          '--sidebar': 'rgba(250, 250, 250, 1)',
-          '--sidebar-foreground': baseColors.text,
-          '--sidebar-primary': baseColors.primary,
-          '--sidebar-primary-foreground': baseColors.primaryForeground,
-          '--sidebar-accent': baseColors.secondary,
-          '--sidebar-accent-foreground': baseColors.secondaryForeground,
-          '--sidebar-border': baseColors.border,
-          '--sidebar-ring': baseColors.primary,
-        },
-        '.dark': {
-          '--background': baseColors.backgroundDark,
-          '--foreground': 'rgba(250, 250, 250, 1)',
-          '--card': 'rgba(24, 24, 27, 1)',
-          '--card-foreground': 'rgba(250, 250, 250, 1)',
-          '--popover': 'rgba(24, 24, 27, 1)',
-          '--popover-foreground': 'rgba(250, 250, 250, 1)',
-          '--primary': baseColors.primary,
-          '--primary-foreground': baseColors.primaryForeground,
-          '--secondary': 'rgba(39, 39, 42, 1)',
-          '--secondary-foreground': 'rgba(250, 250, 250, 1)',
-          '--muted': 'rgba(39, 39, 42, 1)',
-          '--muted-foreground': 'rgba(179, 179, 186, 1)',
-          '--accent': 'rgba(39, 39, 42, 1)',
-          '--accent-foreground': 'rgba(250, 250, 250, 1)',
-          '--destructive': 'rgba(255, 89, 67, 1)',
-          '--border': 'rgba(255, 255, 255, 0.1)',
-          '--input': 'rgba(255, 255, 255, 0.15)',
-          '--ring': baseColors.primary,
-          '--chart-1': 'rgba(130, 80, 255, 1)',
-          '--chart-2': 'rgba(42, 150, 137, 1)',
-          '--chart-3': 'rgba(254, 154, 0, 1)',
-          '--chart-4': 'rgba(166, 56, 243, 1)',
-          '--chart-5': 'rgba(245, 90, 40, 1)',
-          '--sidebar': 'rgba(24, 24, 27, 1)',
-          '--sidebar-foreground': 'rgba(250, 250, 250, 1)',
-          '--sidebar-primary': baseColors.primary,
-          '--sidebar-primary-foreground': baseColors.primaryForeground,
-          '--sidebar-accent': 'rgba(39, 39, 42, 1)',
-          '--sidebar-accent-foreground': 'rgba(250, 250, 250, 1)',
-          '--sidebar-border': 'rgba(255, 255, 255, 0.1)',
-          '--sidebar-ring': baseColors.primary,
-        },
-      }),
+      default: colors.background[mode],
+      paper: colors.background[mode],
     },
   },
-  cssVariables: true,
 })
 
-export default theme
+export const getTheme = (mode: 'light' | 'dark') => createTheme(getThemeOptions(mode))
