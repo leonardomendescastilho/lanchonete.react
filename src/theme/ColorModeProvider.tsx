@@ -28,7 +28,7 @@ export const ColorModeProvider = ({ children }: ColorModeProviderProps) => {
   }, [mode])
 
   return (
-    <ColorModeContext.Provider value={{ toggleColorMode }}>
+    <ColorModeContext.Provider value={{ toggleColorMode, mode }}>
       <ThemeProvider theme={themeMode}>{children}</ThemeProvider>
     </ColorModeContext.Provider>
   )
