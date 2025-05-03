@@ -1,7 +1,11 @@
+import { BrowserRouter } from 'react-router-dom'
+
+import { RouterProvider } from './route/Router'
+
 export const App = () => {
   return (
-    <div>
-      <h1>Olá Mundo do React!</h1>
-    </div>
+    <BrowserRouter>
+      <RouterProvider />
+    </BrowserRouter>
   )
 }
