@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Container } from '@mui/material'
 
 import { NavLink } from 'react-router-dom'
 
@@ -9,12 +9,13 @@ import { Navigation } from '../../../components/Nav'
 
 export const HeaderView = () => {
   return (
-    <Box
+    <Container
       component={'header'}
       sx={{
         display: ' flex',
         alignItems: 'center',
         justifyContent: 'space-between',
+        paddingY: 1,
       }}
     >
       <Box px={2}>
@@ -26,6 +27,6 @@ export const HeaderView = () => {
       <Navigation />
 
       <Cart />
-    </Box>
+    </Container>
   )
 }

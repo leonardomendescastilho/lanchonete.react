@@ -1,4 +1,4 @@
-import Container from '@mui/material/Container'
+import { Box } from '@mui/material'
 
 import { Outlet } from 'react-router-dom'
 
@@ -7,10 +7,10 @@ import { Header } from '@/pages/@layout/Header'
 
 export default function Layout() {
   return (
-    <Container>
+    <Box sx={{ minHeight: '100dvh' }}>
       <Header />
       <Outlet />
       <Footer />
-    </Container>
+    </Box>
   )
 }
