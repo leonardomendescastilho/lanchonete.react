@@ -3,13 +3,12 @@ import { Badge, IconButton, Tooltip } from '@mui/material'
 
 export const CartView = () => {
   return (
-    <Tooltip arrow title={'Clique para abrir o Cart'}>
+    <Tooltip sx={{ cursor: 'pointer' }} arrow title={'Clique para abrir o Cart'}>
       <IconButton
         sx={{
           color: 'black',
-          position: 'relative',
         }}
-        aria-label='Abrir Cart'
+        aria-label='cart'
         onClick={() => console.log('cart clicado')}
       >
         <ShoppingCartOutlinedIcon />
