@@ -9,24 +9,34 @@ import { Navigation } from '../../../components/Nav'
 
 export const HeaderView = () => {
   return (
-    <Container
-      component={'header'}
+    <Box
       sx={{
-        display: ' flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingY: 1,
+        position: 'sticky',
+        top: 0,
+        zIndex: 1000,
+        bgcolor: 'white',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
       }}
     >
-      <Box px={2}>
-        <NavLink to={'/'}>
-          <img src={Logo} alt='Logo' />
-        </NavLink>
-      </Box>
+      <Container
+        component={'header'}
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          paddingY: 1,
+        }}
+      >
+        <Box sx={{ px: 2 }}>
+          <NavLink to={'/'}>
+            <Box component={'img'} sx={{ cursor: 'pointer' }} src={Logo} alt='Logo' />
+          </NavLink>
+        </Box>
 
-      <Navigation />
+        <Navigation />
 
-      <Cart />
-    </Container>
+        <Cart />
+      </Container>
+    </Box>
   )
 }

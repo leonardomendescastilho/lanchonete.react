@@ -15,10 +15,17 @@ export const LinkView = ({ to, children, ...props }: LinkViewProps) => {
       sx={{
         px: 2,
         py: 1,
+        fontSize: {
+          xs: '1rem',
+          md: '1.1rem',
+        },
         textDecoration: isActive ? 'underline' : 'none',
         color: isActive ? 'primary.main' : 'text.primary',
         '&:hover': {
           textDecoration: 'underline',
+          color: 'primary.main',
+        },
+        '&:active': {
           color: 'primary.main',
         },
         fontWeight: 'bold',
