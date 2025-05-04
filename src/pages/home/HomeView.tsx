@@ -1,5 +1,5 @@
-import { Container } from '@mui/material'
+import Box from '@mui/material/Box'
 
 export const HomeView = () => {
-  return <Container></Container>
+  return <Box></Box>
 }
