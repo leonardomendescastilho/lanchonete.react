@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/material'
+import { AppBar, Box, Container } from '@mui/material'
 
 import { NavLink } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ import { Navigation } from '../../../components/Nav'
 
 export const HeaderView = () => {
   return (
-    <Box
+    <AppBar
       sx={{
         position: 'sticky',
         top: 0,
@@ -37,6 +37,6 @@ export const HeaderView = () => {
 
         <Cart />
       </Container>
-    </Box>
+    </AppBar>
   )
 }
