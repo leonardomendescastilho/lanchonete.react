@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import Layout from '@/pages/@layout/Layout.tsx'
 import { Home } from '@/pages/home'
-import { Login } from '@/pages/login'
+import { Login } from '@/pages/Login'
 import { ProtectedRoutes } from '@/route/ProtectedRoutes'
 
 export const RouterProvider = () => {
