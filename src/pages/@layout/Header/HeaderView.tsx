@@ -6,6 +6,7 @@ import Logo from '@/assets/logo.svg'
 import { Cart } from '@/components/Cart'
 
 import { Navigation } from '../../../components/Nav'
+import { ProfileLoginIcon } from '@/components/ProfileLoginIcon'
 
 export const HeaderView = () => {
   return (
@@ -34,8 +35,11 @@ export const HeaderView = () => {
         </Box>
 
         <Navigation />
-
-        <Cart />
+        
+        <Box sx={{ display: 'flex', gap: 1 }}>
+          <ProfileLoginIcon />
+          <Cart />
+        </Box>
       </Container>
     </AppBar>
   )
