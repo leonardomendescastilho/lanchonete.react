@@ -1,0 +1,1 @@
+export { SignUpView as SignUp } from './SignUpView'
