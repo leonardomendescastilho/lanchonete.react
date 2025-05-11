@@ -1,4 +1,4 @@
-import { Button, Container, Stack, Typography } from '@mui/material'
+import { Button, Container, Typography } from '@mui/material'
 import Box from '@mui/material/Box'
 
 export const HeroView = () => {
