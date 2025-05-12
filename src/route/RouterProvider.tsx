@@ -10,8 +10,8 @@ import { ProtectedRoutes } from '@/route/ProtectedRoutes'
 export const RouterProvider = () => {
   return (
     <Routes>
-      <Route path='/login' element={<Login />} />
       <Route path='/cadastrar' element={<SignUp />} />
+      <Route path='/login' element={<Login />} />
 
       <Route element={<ProtectedRoutes />}>
         <Route path='/' element={<Layout />}>
