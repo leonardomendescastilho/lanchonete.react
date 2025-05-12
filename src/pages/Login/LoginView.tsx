@@ -11,6 +11,7 @@ export const LoginView = () => {
         alignItems: 'center',
         justifyContent: 'center',
         height: '100vh',
+        bgcolor: '#FFF7ED',
       }}
     >
       <Paper
