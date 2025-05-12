@@ -7,7 +7,7 @@ import { Header } from '@/pages/@layout/Header'
 
 export default function Layout() {
   return (
-    <Box sx={{ minHeight: '100dvh' }}>
+    <Box sx={{ minHeight: '100dvh', display: 'flex', flexDirection: 'column' }}>
       <Header />
       <Outlet />
       <Footer />
