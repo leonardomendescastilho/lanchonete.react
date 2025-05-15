@@ -54,7 +54,7 @@ export const SignUpView = () => {
               Crie sua conta
             </Typography>
             <Typography variant='body2' sx={{ color: 'text.secondary' }}>
-              Cadastre-se para fazer pedidos deliciosos ;P
+              Cadastre-se para fazer pedidos deliciosos ;;P
             </Typography>
           </Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
