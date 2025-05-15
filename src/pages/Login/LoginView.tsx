@@ -52,7 +52,7 @@ export const LoginView = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: 3 }}>
           <Box>
             <Typography component='h1' variant='h5' fontWeight='bold'>
-              Bem-vindo de volta!!
+              Bem-vindo de volta!!!
             </Typography>
             <Typography variant='body2' sx={{ color: 'text.secondary' }}>
               Entre na sua conta para fazer pedidos
