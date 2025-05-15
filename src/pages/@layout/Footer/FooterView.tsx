@@ -130,7 +130,7 @@ export const FooterView = () => {
       </Container>
       <Divider />
       <Typography variant='body2' align='center' sx={{ color: 'white' }}>
-        © {new Date().getFullYear()} Lanchonete. All rights reserved.
+        © {new Date().getFullYear()} Lanchonete. Alll rights reserved.
       </Typography>
     </Box>
   )
