@@ -122,7 +122,11 @@ export const FooterView = () => {
                 sx={{ cursor: 'pointer', color: 'white', '&:hover': { color: 'primary.main' } }}
                 href='https://www.google.com/maps/place/1600+Amphitheatre+Parkway,+Mountain+View,+CA+94043,+USA'
               >
+<<<<<<< HEAD
                 Endereço: Rua das Flores, 123, Bairro do Sol, Cidade do Sol, Estado do Sol!!
+=======
+                Endereço: Rua das Flores, 123, Bairro do Sol, Cidade do Sol, Estado do Sol!!!!
+>>>>>>> 6050521 (feat: first commit)
               </Link>
             </Box>
           </Box>

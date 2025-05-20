@@ -2,6 +2,15 @@ import { Box, Button, Divider, Link, Paper, TextField, Typography } from '@mui/m
 
 import Logo from '@/assets/logo-login.svg'
 
+<<<<<<< HEAD
+=======
+/**
+ * Renders the login view component, which includes a login form and options for password recovery
+ * and account registration. The component is styled using Material-UI and displays the company's
+ * logo and welcome messages. It includes fields for email and password input and buttons for
+ * submitting the form and navigating to password recovery or registration pages.
+ */
+>>>>>>> 6050521 (feat: first commit)
 export const LoginView = () => {
   return (
     <Box
@@ -52,7 +61,11 @@ export const LoginView = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center', gap: 3 }}>
           <Box>
             <Typography component='h1' variant='h5' fontWeight='bold'>
+<<<<<<< HEAD
               Bem-vindo de volta!!!!!
+=======
+              Bem-vindo de volta!!!!!!
+>>>>>>> 6050521 (feat: first commit)
             </Typography>
             <Typography variant='body2' sx={{ color: 'text.secondary' }}>
               Entre na sua conta para fazer pedidos
