@@ -139,7 +139,7 @@ export const SignUpView = () => {
             <Divider />
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1 }}>
               <Typography variant='body2' sx={{ color: 'text.secondary' }}>
-                Já tem uma conta?
+                Já tem uma conta??
               </Typography>
               <Link href='/login' underline='hover' rel='noopener noreferrer' target='_self'>
                 Faça login
