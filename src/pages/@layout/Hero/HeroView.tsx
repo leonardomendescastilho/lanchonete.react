@@ -32,7 +32,7 @@ export const HeroView = () => {
         >
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             <Typography variant='h3' fontWeight={'bold'}>
-              The Best Hot Dogs in Town!
+              The Best Hot Dogs in Town!!
             </Typography>
             <Typography variant='h6' fontWeight={'regular'}>
               Handcrafted gourmet hot dogs with premium ingredients and unique flavor combinations.
